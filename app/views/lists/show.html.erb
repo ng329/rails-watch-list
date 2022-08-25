@@ -1,17 +1,24 @@
-<h1><%= @list.name %></h1>
-
-<% @list.movies.each do |movie| %>
-  <div class="card-product">
-    <img src=<%=movie.poster_url%> />
-    <div class="card-product-infos">
-      <%# add movie link when controller added %>
-        <h2><%= movie.title %></h2>
-        <p><%= movie.overview %></p>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIX6RiIX2SQfiXF1G_yPz0SKN5n6JDGyU8Q&usqp=CAU);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
   </div>
-<% end %>
+</div>
+
+<div class="cards">
+  <% @list.movies.each do |movie| %>
+    <div class="card-trip">
+      <img src=<%=movie.poster_url%> />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= movie.title %></h2>
+          <p><%= movie.overview %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 
 <div>
-  <%= link_to "View bookmarks", list_bookmarks_path(@list)%>
+  <button class="btn-flat"><%= link_to "View bookmarks", list_bookmarks_path(@list)%></button>
 </div>
