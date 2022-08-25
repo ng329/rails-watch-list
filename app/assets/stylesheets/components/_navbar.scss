@@ -2,18 +2,13 @@
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
-  border-bottom: 1px solid $gray;
-  margin-bottom: 10px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon .navbar-brand {
   width: 40px;
 }
 
 .navbar-lewagon-white {
-  background-color: white;
+  justify-content: space-between;
+  background-color: black;
 }
