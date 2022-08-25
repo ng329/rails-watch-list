@@ -1,0 +1,12 @@
+<h1><%= @list.name %></h1>
+
+<% @list.movie.each do |movie| %>
+  <div class="card-product">
+    <img src=<%=movie.poster_url%> />
+    <div class="card-product-infos">
+      <%# add movie link when controller added %>
+        <h2><%= movie.title %></h2>
+        <p><%= movie.overview %></p>
+    </div>
+  </div>
+<% end %>
