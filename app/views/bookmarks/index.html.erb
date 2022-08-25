@@ -2,8 +2,10 @@
 
 <ul>
   <% @bookmarks.each do |bookmark| %>
-  <%# add link to movie page? %>
     <li><%= bookmark.movie.title %></li>
+    <%= link_to "Delete", list_bookmark_path(@list, bookmark),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
   <% end %>
 </ul>
 
