@@ -1,6 +1,7 @@
 .new-bookmark-box {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   text-align: center;
   margin: 20px;
 }

@@ -1,11 +1,12 @@
 .new-list-box {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
-  margin: 20px;
+  margin: 50px;
   padding: 15px
 }
 
 .form-new-list {
-  margin: 10px;
+  margin: 20px;
 }
