@@ -75,3 +75,6 @@ gem "font-awesome-sass", "~> 6.1"
 
 #simpleforms from bootstrap
 gem "simple_form", github: "heartcombo/simple_form"
+
+# secret keys gem
+gem "dotenv-rails", groups: [:development, :test]
