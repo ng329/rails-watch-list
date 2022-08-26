@@ -78,3 +78,6 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 # secret keys gem
 gem "dotenv-rails", groups: [:development, :test]
+
+# image database
+gem "cloudinary"

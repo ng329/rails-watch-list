@@ -1,11 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIX6RiIX2SQfiXF1G_yPz0SKN5n6JDGyU8Q&usqp=CAU);">
+<div class="banner"
+      style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+      url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>');">
   <div class="container">
     <h1><%= @list.name %></h1>
   </div>
 </div>
 <div class="list-all">
   <div class="list-text">
-    <%= link_to "Back to lists", new_list_path, class:"btn btn-flat"%>
+    <%= link_to "Back to lists", lists_path, class:"btn btn-flat"%>
   </div>
   <div class="cards">
     <% @list.movies.each do |movie| %>
@@ -25,7 +27,7 @@
 
 
 <div class="new-bookmark-box">
-  <h3>Create new bookmark for <%= @list.name %></h3>
+  <h3>Create new bookmark</h3>
   <div class="form-box">
     <div class="form-new-bookmark">
       <%= simple_form_for [@list, @bookmark] do |f| %>

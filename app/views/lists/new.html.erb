@@ -1,0 +1,12 @@
+<div class="new-list-box">
+  <h3>Create new bookmark for <%= @list.name %></h3>
+  <div class="form-box">
+    <div class="form-new-list">
+      <%= simple_form_for [@list] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
