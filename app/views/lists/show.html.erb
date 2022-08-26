@@ -3,23 +3,36 @@
     <h1><%= @list.name %></h1>
   </div>
 </div>
-
-<div class="cards">
-  <% @list.movies.each do |movie| %>
-  <%# change to product cards %>
-    <div class="card-product">
-      <img src=<%=movie.poster_url%> />
-      <div class="card-product-infos">
-        <div>
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
+<div class="list-all">
+  <div class="list-text">
+    <%= link_to "Back to lists", new_list_path, class:"btn btn-flat"%>
+  </div>
+  <div class="cards">
+    <% @list.movies.each do |movie| %>
+    <%# change to product cards %>
+      <div class="card-product">
+        <img src=<%=movie.poster_url%> />
+        <div class="card-product-infos">
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 
-<div>
-  <button class="btn-flat"><%= link_to "View bookmarks", list_bookmarks_path(@list)%></button>
+<div class="new-bookmark-box">
+  <h3>Create new bookmark for <%= @list.name %></h3>
+  <div class="form-box">
+    <div class="form-new-bookmark">
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
 </div>
