@@ -1,24 +1,12 @@
-# README
+# About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application used to curate collections of movies 
 
-Things you may want to cover:
 
-* Ruby version
+## Specs:
 
-* System dependencies
+* Ruby on rails application
+* Setup to run on local server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Created for:
+Created as a part of Le Wagon web development bootcamp. 
