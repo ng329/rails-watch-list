@@ -2,7 +2,7 @@
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
-  color: white;
+  color: rgb(247, 248, 249);
 }
 
 .navbar-lewagon .navbar-brand {
@@ -11,15 +11,19 @@
 
 .navbar-lewagon-white {
   justify-content: space-between;
-  background-color: rgb(68, 6, 6);
+  background-color: rgb(248, 239, 239);
 }
 
 .navbar-nav {
  a {
-  color: white;
+  color: rgba(244, 234, 234, 0.685);
  }
 }
 
 .navbar-brand i {
   background-color: white;
+}
+
+.navbar {
+  background-color: rgb(68, 6, 6);
 }
