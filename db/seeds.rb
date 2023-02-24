@@ -17,21 +17,20 @@ puts 'finished clearing database'
 puts 'adding movies'
 
 url = 'http://tmdb.lewagon.com/movie/top_rated'
-# user_serialized = URI.open(url).read
 
-(1..20).each do |n|
-  movies_serialized = URI.open("#{url}?page=#{n}").read
-  movies = JSON.parse(movies_serialized)['results']
-  movies.each do |movie|
-    title = movie['title']
-    overview = movie['overview']
-    poster_url = "https://image.tmdb.org/t/p/original#{movie['poster_path']}"
-    rating = movie['vote_average']
-    Movie.create(title: title, overview: overview, poster_url: poster_url, rating: rating)
-  end
-  puts "#{n}"
+# pages are identical if change number?
+movies_serialized = URI.open("#{url}?page=1").read
+movies = JSON.parse(movies_serialized)['results']
+movies.each do |movie|
+  title = movie['title']
+  overview = movie['overview']
+  poster_url = "https://image.tmdb.org/t/p/original#{movie['poster_path']}"
+  rating = movie['vote_average']
+  movie =  Movie.new(title: title, overview: overview, poster_url: poster_url, rating: rating)
+  movie.save
+  puts movie.title.to_s
 end
 
 # List.create(name: "sci-fi", photo: "")
 # List.create(name: "fantasy", photo: "")
-# List.create(name: "Drama", photo: "https://media.glamour.com/photos/5ec2e91dccfbc8c1a8fe8cbf/master/w_3000,h_2032,c_limit/MSDTITA_FE057.jpg")
+# List.create(name: "Drama", photo: "")
